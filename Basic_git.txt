@@ -1,0 +1,44 @@
+[200~Here is the exact 3-step terminal workflow to create a new file, save it locally, and push it up to the GitHub website.
+## 1. Create a New File
+Make sure you are still inside your repository folder. Let's create a quick text file right from the terminal: [1] 
+
+echo This file was created in the Mint terminal! > mint_test.txt
+
+(You can check that it exists by typing ls).
+## 2. Check the Status
+Run the status command to see how Git reacts to your new file:
+
+git status
+
+You will see mint_test.txt listed in red text under Untracked files. This means Git sees the file but isn't saving it yet. [2] 
+## 3. Stage, Commit, and Push (The Big Three)
+Run these three commands in order to send the file to the web:
+
+* Step A: Stage the file (Tell Git to track this specific file)
+
+git add mint_test.txt
+
+(Tip: If you ever want to add ALL new or edited files at once, you can type git add . instead).
+* Step B: Commit the file (Save a snapshot of the file with a short note explaining what you changed)
+
+git commit -m Add my first file from Mint terminal
+
+* Step C: Push to the web (Upload the saved snapshot to GitHub)
+
+git push origin main
+
+(Note: If your main branch happens to be named master instead of main, change the last word to master).
+
+## Verify on the Web
+Open your web browser and refresh your GitHub repository page. Your new mint_test.txt file will instantly appear there! [3] 
+Whenever you finish editing files in Neovim, you will use this exact same three-step sequence (git add, git commit, git push) to upload your progress.
+Let me know:
+
+* Did the git push command finish with a To https://github.com... success message?
+* Do you want to see how to download changes if you ever edit files directly on the website?
+
+
+[1] [https://code.tutsplus.com](https://code.tutsplus.com/git-on-windows-for-newbs--net-25847t)
+[2] [https://www.youtube.com](https://www.youtube.com/shorts/dg7A70PMnnU)
+[3] [https://blog.devgenius.io](https://blog.devgenius.io/how-to-publish-your-static-website-on-github-c7797a1d8cfd)
+~
